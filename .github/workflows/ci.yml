@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      #  Checkout repository
+      #  Checkout code
       - name: Checkout Code
         uses: actions/checkout@v3
 
@@ -19,10 +19,10 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '8'
 
-      #  Give Gradle permission to execute
+      #  Make Gradle wrapper executable
       - name: Grant permission
         run: chmod +x gradlew
 
